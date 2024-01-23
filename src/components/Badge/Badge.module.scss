@@ -1,0 +1,13 @@
+.root {
+  display: inline-flex;
+  width: max-content;
+  padding: fsize(8);
+  color: #000;
+  background-color: #fff;
+}
+
+.content {
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}

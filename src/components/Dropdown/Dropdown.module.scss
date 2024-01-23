@@ -1,0 +1,30 @@
+.root {
+  --text: #fff;
+
+  display: flex;
+  align-items: baseline;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+.Dropdown {
+  position: relative;
+  &Label {
+    padding: 8px 0;
+  }
+  &Toggle {
+      align-items: center;
+
+      pointer-events: auto !important
+    }
+    &Text {
+      line-height: 1.14;
+      color: var(--text);
+      display: inline-flex;
+
+      > div {
+        border-bottom: 1px solid #fff;
+      }
+    }

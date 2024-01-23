@@ -1,0 +1,15 @@
+.Home {
+  width: 100vw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $max-mobile) {
+    position: fixed;
+  }
+}

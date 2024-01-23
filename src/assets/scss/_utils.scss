@@ -1,0 +1,6 @@
+$baseWidth: 1920;
+$baseHeight: 1080;
+
+@media (max-width: $max-mobile) {
+  $baseWidth: 375;
+}

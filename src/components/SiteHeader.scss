@@ -1,0 +1,118 @@
+@function pxToRem($sizeInPx) {
+  $result: calc(#{$sizeInPx} / var(--base-screen) * 100vw);
+  @return $result;
+}
+
+.SiteHeader {
+  pointer-events: none;
+
+  .RightPanel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--header-height);
+    overflow: hidden;
+
+    .HeaderTime {
+      transform: translateY(0%);
+      transition: transform var(--transition-default);
+    }
+
+    .button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(var(--header-height));
+      transition: none;
+    }
+  }
+}
+
+.SiteHeaderPanel {
+  display: flex;
+  align-items: center;
+  width: 455px;
+  transition: background-color 0.3s ease, width var(--transition-default);
+  &__wrapper {
+    position: relative;
+
+    @media screen and (max-width: $max-mobile) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .SiteBranding {
+    line-height: 0;
+
+    svg {
+      max-width: 129px;
+      width: 100%;
+      max-height: 10px;
+
+      path {
+        fill: currentColor;
+        transition: fill 0.3s var(--transition-ease),
+          opacity 0.3s var(--transition-ease),
+          transform 0.3s var(--transition-ease);
+      }
+
+      .slash {
+        opacity: 0;
+        transform: translateX(35px);
+      }
+    }
+  }
+}
+
+.SiteNavigation {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  @include f-suisse-intl();
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+
+  @media (min-width: 428px) {
+    font-size: 16px;
+  }
+}
+
+.SiteHeaderLinks {
+  &__wrapper {
+    position: absolute;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  .SiteHeaderNavigateBack {
+    &__wrapper {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .SiteHeaderLinks {
+    @include reset-list;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      @include f-suisse-intl();
+      font-size: 13px;
+      line-height: 2.28;
+      transition: all 0.3s;
+
+      &[data-disabled] {
+        pointer-events: none;
+      }
+    }
+  }
+}

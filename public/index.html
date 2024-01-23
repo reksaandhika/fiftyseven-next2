@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#000000"/>
+    <meta name="author" content="FIFTYSEVEN">
+    <meta name="description" content="Designing stories that matter, building brands that last.">
+    <meta property="og:site_name" content="FIFTYSEVEN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fiftyseven.co/">
+    <meta property="og:image" content="https://fiftyseven.co/thumbnail.jpg">
+    <meta property="og:title" content="Branding and design agency">
+    <meta property="og:description" content="Designing stories that matter, building brands that last.">
+    <meta name="twitter:card" content="Designing stories that matter, building brands that last.">
+    <meta name="twitter:site" content="@hellofiftyseven">
+    <meta name="twitter:title" content="Branding and design agency">
+    <meta name="twitter:description" content="Designing stories that matter, building brands that last.">
+    <meta name="twitter:creator" content="@hellofiftyseven">
+    <meta name="twitter:image:src" content="https://fiftyseven.co/thumbnail.jpg">
+    <title>FIFTYSEVEN — Branding and design agency</title>
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <script>
+      !function (e, t) {
+        "object" == typeof exports && "undefined" != typeof module
+          ? module.exports = t()
+          : "function" == typeof define && define.amd
+            ? define(t)
+            : (
+              e = "undefined" != typeof globalThis
+              ? globalThis
+              : e || self).cookie = t()
+      }(this, (function () {
+        "use strict";
+        function e(e) {
+          return "string" == typeof(e = JSON.stringify(e)) && !!/^\{[\s\S]*\}$/.test(e)
+        }
+        function t() {
+          if (!(this instanceof t))
+            return new t
+        }
+        t.prototype = {
+          get: function (e) {
+            for (var t = e + "=", n = document.cookie.split(";"), o = 0; o < n.length; o++) {
+              for (var i = n[o]; " " == i.charAt(0);)
+                i = i.substring(1, i.length);
+              if (0 == i.indexOf(t))
+                return decodeURI(i.substring(t.length, i.length))
+            }
+            return !1
+          },
+          set: function (t, n, o) {
+            if (e(t))
+              for (const e in t)
+                this.set(e, t[e], n, o);
+              else if ("string" == typeof t) {
+                const i = e(o)
+                    ? o
+                    : {
+                      expires: o
+                    },
+                  r = void 0 !== i.path
+                    ? `;path=${i.path};path=/`
+                    : ";path=/",
+                  s = i.domain
+                    ? `;domain=${i.domain}`
+                    : "",
+                  f = i.secure
+                    ? ";secure"
+                    : "";
+                let c = void 0 !== i.expires
+                  ? i.expires
+                  : "";
+                "string" == typeof c && "" !== c
+                  ? c = new Date(c)
+                  : "number" == typeof c && (c = new Date(+ new Date + 864e5 * c)),
+                "" !== c && "toGMTString" in c && (c = `;expires=${c.toGMTString()}`);
+                const u = i.sameSite
+                  ? `;SameSite=${i.sameSite}`
+                  : "";
+                document.cookie = `${t}=${encodeURI(n) + c + r + s + f + u}`
+              }
+            },
+          remove: function (e) {
+            for (var t = 0, n = (
+              e = e instanceof Array
+              ? e
+              : function (e) {
+                return Array
+                  .prototype
+                  .slice
+                  .call(e)
+              }(arguments)).length; t < n; t++)
+              this.set(e[t], "", -1);
+            return e
+          },
+          clear: function (e) {
+            return e
+              ? this.remove(e)
+              : this.remove(function (e) {
+                var t = [],
+                  n = "";
+                for (n in e)
+                  t.push(n);
+                return t
+              }(this.all()))
+          },
+          all: function () {
+            if ("" === document.cookie)
+              return {};
+            for (var e = document.cookie.split("; "), t = {}, n = 0, o = e.length; n < o; n++) {
+              var i = e[n].split("=");
+              t[decodeURI(i[0])] = decodeURI(i[1])
+            }
+            return t
+          }
+        };
+        let n = null;
+        const o = function (o, i, r) {
+          const s = arguments;
+          return n || (n = t()),
+          0 === s.length
+            ? n.all()
+            : 1 === s.length && null === o
+              ? n.clear()
+              : 2 !== s.length || i
+                ? "string" != typeof o || i
+                  ? "string" == typeof o && i || e(o)
+                    ? n.set(o, i, r)
+                    : void 0
+                  : n.get(o)
+                : n.clear(o)
+        };
+        for (const e in t.prototype)
+          o[e] = t.prototype[e];
+        return o
+      }));
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer'
+            ? '&l=' + l
+            : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f
+          .parentNode
+          .insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5ZQB9B3');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        },
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m
+          .parentNode
+          .insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-55534400-2', 'auto');
+      // ga('send', 'pageview');
+      ga('set', 'allowAdFeatures', false);
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZQB9B3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+
+</html>

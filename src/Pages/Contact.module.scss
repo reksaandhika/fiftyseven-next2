@@ -1,0 +1,23 @@
+.container {
+  --container-frame-height: calc(87dvh - var(--header-height));
+  top: 5vh;
+
+  :global(.simplebar-content) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @media (max-width: $max-mobile) {
+      padding-top: 76px !important;
+    }
+  }
+
+  :global(.simplebar-horizontal) {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    height: 100%;
+    padding-bottom: 110px;
+  }
+}

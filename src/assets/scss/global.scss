@@ -1,0 +1,25 @@
+@import "variables/colors";
+@import "variables/typography";
+@import "utils";
+
+// $site-gutter-y: 65px;
+$site-gutter-mob-y: 25px;
+$site-gutter-y: 5vh;
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin responsive($max: null) {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @if ($max !=null) {
+    max-width: $max;
+  }
+
+  @content;
+}

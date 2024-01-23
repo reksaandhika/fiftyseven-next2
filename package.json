@@ -1,0 +1,57 @@
+{
+  "name": "fifyseven-next",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@liholiho/react-modal-hook": "^3.0.0",
+    "@popperjs/core": "^2.11.6",
+    "@studio-freight/lenis": "^1.0.33",
+    "@studio-freight/react-lenis": "^0.0.38",
+    "react-ripples": "^2.2.1",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "react-teleporter": "^3.1.0",
+    "react-use-clipboard": "^1.0.9",
+    "sass": "^1.59.3",
+    "sbd": "^1.0.19",
+    "simplebar-react": "^3.2.4",
+    "sniffer": "github:kaiyiwong/sniffer",
+    "splitting": "^1.0.6",
+    "styled-components": "^5.3.9",
+    "swiper": "^11.0.5",
+    "typescript": "^4.9.5",
+    "use-reducer-async": "^2.1.1",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "serve": "serve ./build",
+    "ncu": "ncu"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "npm-check-updates": "^16.7.13",
+    "react-app-rewired": "^2.2.1",
+    "serve": "^14.2.0",
+    "url-loader": "^4.1.1",
+    "webpack-image-placeholder-loader": "^1.2.1"
+  }
+}

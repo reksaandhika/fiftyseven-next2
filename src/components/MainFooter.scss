@@ -1,0 +1,16 @@
+.MainFooter {
+  transition: transform var(--transition-default);
+  overflow: hidden;
+
+  &.hide {
+    transform: translateY(250%);
+  }
+
+  &.active {
+    .Panel--dark {
+      background-color: var(--color-footerpanel);
+      color: var(--color-footertext);
+    }
+  }
+
+}
